@@ -191,7 +191,7 @@
 <p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
 
 <h3 id="examples">Examples</h3>
-
+<p>Inline math: (\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…)</p>
 <p>Block math:
 $$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
@@ -406,6 +406,44 @@ $$</p>
 </a>
 
   </div>
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
 </footer>
     <script type="text/javascript" src="https://soufsilence.github.io/js/bundle.min.3f57b0be0c15c47b7c3156beb63d0589635b925ac031fbe439544643f6c987d6bc2f8af0b951d5ee170ab127c3dd75f035d71f976192f09851ae1fd9729c880b.js" integrity="sha512-P1ewvgwVxHt8MVa&#43;tj0FiWNbklrAMfvkOVRGQ/bJh9a8L4rwuVHV7hcKsSfD3XXwNdcfl2GS8JhRrh/ZcpyICw==" crossorigin="anonymous"></script>
     
